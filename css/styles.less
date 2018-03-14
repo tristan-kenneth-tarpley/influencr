@@ -1,0 +1,982 @@
+/* CSS Document */
+@primaryColor: #1d334c;
+@maize: #ffc72c;
+@darkerBlue: #16237a;
+
+h1,h2,h3,h4,h5,h6 {
+	color: @primaryColor !important;
+	font-family: "Museo 700";
+	font-weight: 700;
+}
+
+p,a,label {
+	font-family: "Europa-Light";
+}
+
+input {
+  border-radius: 20px;
+  border: 3px solid @primaryColor;
+  width: 40%;
+  transition: .5s;
+  text-align: center;
+  padding: 1% 0;
+}
+
+input:hover {
+  border: 3px solid @maize;
+}
+
+.blue-border {
+	border-top: 3px solid @primaryColor;
+	border-left: 3px solid @primaryColor;
+}
+.maize-border {
+	border-right: 3px solid @maize;
+	border-bottom: 3px solid @maize;
+}
+.body-container {
+	padding: 3%;
+	width: 80%;
+	margin: 2% auto 5% auto;
+	
+	h1,h2,h3,h4,h5,h6,p {
+		text-align:center;
+	}
+}
+
+
+
+
+.videoContainer {
+	width: 40%;
+	margin: 0 auto;
+    padding-bottom:50%;
+    position:relative;
+    height:5%;
+}
+.videoContainer iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+/*.button {
+  text-decoration: none;
+  margin-top: 5%;
+  border: 3px solid white;
+  background-color: @primaryColor;
+  color: white;
+  border-radius: 20px;
+  padding: 1% 5%;
+  transition: .7s;
+    cursor: pointer;
+}
+
+.button:hover {
+  opacity: .7;
+}*/
+
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: .7s;
+  -moz-animation-delay: .7s;
+  animation-delay: .7s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay:1.4s;
+  animation-delay: 1.4s;
+}
+.fade-in.three {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.fade-in.four {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay:3s;
+  animation-delay: 3s;
+}
+.fade-in.five {
+  -webkit-animation-delay: .05s;
+  -moz-animation-delay: .05s;
+  animation-delay: .05s;
+}
+
+
+
+
+
+.infCta {
+  position: fixed;
+  bottom: 3%;
+  height: 9%;
+  left: 1%;
+  background-color: #30bf30;
+  color: white;
+  padding: 1%;
+  border-radius: 10px;
+  font-size: 110%;
+  transition-duration: .7s;
+  cursor: pointer;
+  box-shadow: -5px 6px 48px -9px rgba(0,0,0,0.7);
+  border: 1px solid transparent;
+  font-size: 80%;
+  transition-duration: .7s;
+}
+
+.infCta:hover {
+  background-color: #66cc66;
+}
+
+
+.ctaContainer {
+  width: 100%;
+  text-align:center;
+}
+
+
+.acceptedInfluencersContainer {
+  position: fixed;
+  top: 0%;
+  height: 5%;
+  width: 100%;
+  overflow-y: scroll;
+  background-color: #262d37;
+  border: 1px solid #262d37;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding-bottom: .8%;
+}
+
+.acceptedInfluencersContainer p {
+  width: 95%;
+  font-size: 1vw;
+}
+
+
+
+
+
+.keywords > input {
+  margin-bottom: 4px;
+}
+
+.influencers {
+  padding-top: 10%;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.influencersSectionWrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#infSubmit {
+  width: 100%;
+}
+#infSubmit h3 {
+  text-align: center;
+}
+#infSubmit > .keywords > input {
+  width: 100% !important;
+}
+.infButtonContainer {
+  width: 100%;
+  text-align: center;
+}
+
+[type="checkbox"]:checked {
+  color: red;
+}
+
+.infResults {
+  margin: 2% 0;
+}
+
+.infResults a {
+  margin-top: 2px;
+  text-decoration: none;
+  padding: .5% 2%;
+  color: white;
+  background-color: @primaryColor;
+  border: 3px solid transparent;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition-duration: .7s;
+}
+.infResults a:hover {
+  opacity: .7;
+}
+
+.infImages {
+  border-radius: 100%;
+}
+
+.resultContainer {
+  padding: 5% 3%;
+  border-bottom: 3px solid black;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttonInf {
+  margin-top: 1%;
+  width: 50%;
+  padding: 1% 2%;
+  border-radius: 10%;
+}
+
+.keywordMod {
+  text-align:center;
+  border: 3px solid black;
+  margin: 2%;
+  padding: 1% 2%;
+  transition-duration: .5s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.keywordMod:hover {
+  color: white;
+  background-color: black;
+}
+
+
+
+.metrics {
+  margin-top: 5%;
+}
+
+.metrics > div > p {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.metrics > div > p > span {
+  line-height: 200%;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+
+.sliderContainer {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.slider {
+  margin-top: 5%;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: @maize;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: @maize;
+    cursor: pointer;
+}
+
+
+
+
+.rfpContainer {
+  width: 60%;
+  margin: 10% auto 0;
+}
+
+.rfp {
+  background-color: rgba(25, 255, 25, 1);
+  border-radius: 5%;
+  padding: 5% 10%;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  transition: .7s;
+}
+
+.rfp:hover {
+  background-color: rgba(25, 255, 25,.5);
+}
+
+
+.inactive {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+
+
+
+
+
+
+
+/*animations*/
+
+
+
+
+/*Negative delay values skip rather than pause.*/
+.row1 .left, .row1 .right {
+  animation-delay:-0s; 
+  /*Obviously not needed*/
+}
+.row2 .left, .row2 .right {
+  animation-delay:-0.5s;
+}
+.row3 .left, .row3 .right {
+  animation-delay:-1s;
+}
+.row4 .left, .row4 .right {
+  animation-delay:-1.5s;
+}
+/**/
+
+.loader {
+  position:absolute;
+  top:60%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:200px;
+  height:84px;
+}
+.left, .right {
+  height:6px;
+  width:90px;
+  background-color:#000;
+  border-radius:10px;
+  position:absolute;
+}
+.left {
+  left:0px;
+  animation:left 2s infinite;
+}
+.right {
+  right:0px;
+  animation:right 2s infinite;
+}
+
+
+
+.row1, .row2, .row3, .row4 {
+  position: relative;
+}
+.row1 {
+  top:0px;
+}
+.row2 {
+  top:26px;
+}
+.row3 {
+  top:52px;
+}
+.row4 {
+  top:78px;
+}
+
+@keyframes left {
+  0%, 50%, 100% {
+    width: 90px;
+  }
+  25% {
+    width: 170px;
+  }
+  75% {
+    width:10px;
+  }
+}
+@keyframes right {
+  0%, 50%, 100% {
+    width: 90px;
+  }
+  25% {
+    width: 10px;
+  }
+  75% {
+    width:170px;
+  }
+}
+
+
+
+svg {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  height: 10%;
+}
+
+
+/* ---------- Path ---------- */
+path {
+  stroke: white;
+  stroke-width: 3px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: path 5s alternate infinite;
+}
+
+@keyframes path {
+  from {
+    stroke-dashoffset: 500;
+  }
+  
+  to {
+    stroke: black;
+    fill: rgba(0,0,0,0.25);
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* ---------- Small Circle -------- */
+circle.small {
+  stroke: white;
+  fill: transparent;
+  stroke-width: 1px;
+  stroke-dasharray: 315;  /*Circumference*/
+  stroke-dashoffset: 315; /*Circumference*/
+  animation: circle_small 5s alternate infinite;
+}
+
+@keyframes circle_small {
+  from {
+    stroke-dashoffset: 315; /*Circumference*/
+  }
+  
+  to {
+    stroke: black;
+    fill: rgba(0,0,0,0.25);
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* ---------- Large Circle ---------- */
+circle.large {
+  stroke: white;
+  fill: transparent;
+  stroke-width: 1px;
+  stroke-dasharray: 629;  /*Circumference*/
+  stroke-dashoffset: 629; /*Circumference*/
+  animation: circle_large 5s alternate infinite;
+}
+
+@keyframes circle_large {
+  from {
+    stroke-dashoffset: 629; /*Circumference*/
+  }
+  
+  to {
+    stroke: black;
+    fill: rgba(0,0,0,0.25);
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*------------sass--------------*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.flex {
+margin-top: 1%; }
+
+a.bttn {
+  color: @primaryColor;
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s ease all; 
+  cursor: pointer;    }
+  a.bttn:hover {
+    color: #FFF; }
+  a.bttn:focus {
+    color: #FFF; }
+
+
+button.bttn {
+  color: @primaryColor;
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s ease all; 
+  cursor: pointer;    }
+  button.bttn:hover {
+    color: @maize;
+    border: 3px solid @maize; }
+  button.bttn:focus {
+    color: @maize;
+    border: 3px solid @maize; }
+
+
+.bttn {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 270px;
+  font-weight: bold;
+  padding: 14px 0px;
+  border: 3px solid @primaryColor;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1); }
+  .bttn:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: @primaryColor;
+    z-index: -2; }
+  .bttn:hover:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1; }
+  .bttn:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1; }
+/*# sourceMappingURL=input.css.map */
+
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***************************modal***************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+
+/* The Modal (background) */
+.modal {
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    border: 10px solid @primaryColor;
+    border-radius: 10px;
+    margin: auto;
+    padding: 4% 10%;
+    width: 80%;
+    color: black;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalButtonsContainer {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+}
+
+.modalButtonA {
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 3px solid #66cc66;
+  padding: 1% 2%;
+  font-size: 110%;
+  width: 100%;
+  background-color: #66cc66;
+}
+.modalButtonB {
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 1% 2%;
+  font-size: 100%;
+  width: 100%;
+}
+
+
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+
+
+
+
+.loaderBody {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11em;
+  height: 11em;
+  margin-left: -5.5em;
+  margin-top: -5.5em;
+}
+
+.loader-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  opacity: 0;
+  width: 3em;
+  height: 3em;
+  background: white;
+  -webkit-animation: show 0.88s step-end infinite alternate, pulse 0.88s linear infinite alternate;
+  animation: show 0.88s step-end infinite alternate, pulse 0.88s linear infinite alternate;
+}
+
+.loader-block:nth-child(1) {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-animation-delay: 0.065s;
+  animation-delay: 0.065s;
+}
+
+.loader-block:nth-child(2) {
+  -moz-transform: translate(4em, 0);
+  -ms-transform: translate(4em, 0);
+  -webkit-transform: translate(4em, 0);
+  transform: translate(4em, 0);
+  -webkit-animation-delay: 0.13s;
+  animation-delay: 0.13s;
+}
+
+.loader-block:nth-child(3) {
+  -moz-transform: translate(8em, 0);
+  -ms-transform: translate(8em, 0);
+  -webkit-transform: translate(8em, 0);
+  transform: translate(8em, 0);
+  -webkit-animation-delay: 0.195s;
+  animation-delay: 0.195s;
+}
+
+.loader-block:nth-child(4) {
+  -moz-transform: translate(0, 4em);
+  -ms-transform: translate(0, 4em);
+  -webkit-transform: translate(0, 4em);
+  transform: translate(0, 4em);
+  -webkit-animation-delay: 0.325s;
+  animation-delay: 0.325s;
+}
+
+.loader-block:nth-child(5) {
+  -moz-transform: translate(4em, 4em);
+  -ms-transform: translate(4em, 4em);
+  -webkit-transform: translate(4em, 4em);
+  transform: translate(4em, 4em);
+  -webkit-animation-delay: 0.13s;
+  animation-delay: 0.13s;
+}
+
+.loader-block:nth-child(6) {
+  -moz-transform: translate(8em, 4em);
+  -ms-transform: translate(8em, 4em);
+  -webkit-transform: translate(8em, 4em);
+  transform: translate(8em, 4em);
+  -webkit-animation-delay: 0.455s;
+  animation-delay: 0.455s;
+}
+
+.loader-block:nth-child(7) {
+  -moz-transform: translate(0, 8em);
+  -ms-transform: translate(0, 8em);
+  -webkit-transform: translate(0, 8em);
+  transform: translate(0, 8em);
+  -webkit-animation-delay: 0.39s;
+  animation-delay: 0.39s;
+}
+
+.loader-block:nth-child(8) {
+  -moz-transform: translate(4em, 8em);
+  -ms-transform: translate(4em, 8em);
+  -webkit-transform: translate(4em, 8em);
+  transform: translate(4em, 8em);
+  -webkit-animation-delay: 0.26s;
+  animation-delay: 0.26s;
+}
+
+.loader-block:nth-child(9) {
+  -moz-transform: translate(8em, 8em);
+  -ms-transform: translate(8em, 8em);
+  -webkit-transform: translate(8em, 8em);
+  transform: translate(8em, 8em);
+}
+
+@-webkit-keyframes pulse {
+  from,
+  40% {
+    background: black;
+  }
+  to {
+    background: black;
+  }
+}
+@-webkit-keyframes show {
+  from, 40% {
+    opacity: 0;
+  }
+  41%, to {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  from,
+  40% {
+    background: black;
+  }
+  to {
+    background: black;
+  }
+}
+@keyframes show {
+  from, 40% {
+    opacity: 0;
+  }
+  41%, to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+/*********************************shake shake shake********************************/
+@keyframes shake {
+
+}
+
+@keyframes shook {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+.shaking {
+      /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shook 0.5s; 
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+}
+
+
+
+
+@media only screen and (max-width: 1500px) and (max-height: 830px) {
+    .budgetAllocation {
+        height: 1000px;
+        padding-bottom: 30%;
+    }
+    .diagnosis {
+      padding-bottom: 40%;
+    }
+    .influencers {
+      padding-top: 15%;
+    }
+    .myCol {
+      height: 350px;
+    }
+}
+
+@media only screen and (min-width: 1500px) and (min-height: 500px) {
+  .myCol {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .diagnosisLinkContainer {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .diagnosisSelect {
+    width: 100%;
+  }
+  .diagnosisSelect:hover {
+    width: 100%;
+  }
+
+  .forPadding {
+    padding: 2%;
+  }
+  .diagnosis {
+    padding-bottom: 0;
+  }
+
+  .copycontainer {
+    width: 95%;
+    margin-top: 20%;
+  }
+  .myCol {
+    width: 80%;
+    height: 30%;
+  }
+  .myRow {
+    height: 16%;
+    margin-top: 15%;
+  }
+  .budgetAllocation {
+      height: 2000px;
+  }
+  .influencers {
+    padding-top: 5%;
+  }
+  .forPadding div {
+    width: 100%;
+  }
+  .budgetAllocation {
+    padding-top: 50%;
+  }
+  .influencersSectionWrapper {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  input {
+    padding: 3%;
+    width: 75%;
+    margin-bottom: 1%;
+  }
+  .copycontainer {
+    margin-top: 35%;
+  }
+  .myrow {
+    margin-top: 10%;
+    height: 15%;
+  }
+  .diagnosis {
+    padding-bottom: 1%;
+  }
+
+  .infCta {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 1%;
+    height: 10%;
+    border-radius: 0;
+  }
+
+  .marketrCta {
+    width: 100%;
+    left: 0;
+    bottom: 10%;
+    padding: 1%;
+    height: 10%;
+    border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+
+}
